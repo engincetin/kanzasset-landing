@@ -17,4 +17,4 @@ Then open http://127.0.0.1:8765/.
 
 ## Before go live
 
-Compliance approves all content before the page goes live. The pink markers show placeholders (email, privacy notice) that must be replaced first.
+Compliance approves all content before the page goes live.
