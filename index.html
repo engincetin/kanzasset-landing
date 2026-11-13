@@ -63,12 +63,13 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-rad
 /* Contact and regulatory status */
 .info .wrap { display: grid; grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); gap: 24px 56px; padding-top: 32px; padding-bottom: 24px; }
 .contact { display: flex; flex-direction: column; gap: 18px; font-size: 15px; line-height: 1.55; }
-.label { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--red); }
+.label { margin: 0; line-height: 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--red); }
 .contact address { font-style: normal; margin-top: 4px; }
 .contact .email { margin-top: 4px; font-weight: 700; text-decoration: none; }
 .reg { min-width: 0; }
 .reg-text { margin-top: 4px; font-size: 13px; line-height: 1.6; color: var(--text); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 32px; }
 .reg-text p { margin: 0 0 6px; }
+.reg-text p:last-child { margin-bottom: 0; }
 .reg-text strong { color: var(--ink); }
 
 /* Footer */
@@ -79,12 +80,16 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-rad
 /* Desktop on short screens (laptops, browser with toolbars): keep the page on one screen */
 @media (min-width: 901px) {
   .kv { min-height: 200px; }
+  /* Left column ends on the same line as the regulatory text */
+  .contact { justify-content: space-between; gap: 10px; font-size: 13px; line-height: 1.45; }
+  .contact .email { font-size: 14px; }
 }
 @media (min-width: 901px) and (max-height: 800px) {
   .header .wrap { padding-top: 14px; padding-bottom: 14px; }
   .info .wrap { padding-top: 20px; padding-bottom: 12px; }
-  .contact { gap: 12px; font-size: 14px; line-height: 1.45; }
-  .reg-text { font-size: 12px; line-height: 1.5; }
+  .contact { gap: 8px; font-size: 12px; line-height: 1.4; }
+  .contact .email { font-size: 13px; }
+  .reg-text { font-size: 13px; line-height: 1.5; }
   .footer-row > span, .footer-row > a { padding: 10px 0; }
   .kv-lockup { gap: 20px; }
   .kv-lockup img { width: 132px; }
